@@ -1,0 +1,153 @@
+.product-page {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEFT IMAGES */
+.images-section {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.thumbnail:hover {
+  border-color: #000;
+}
+
+/* RIGHT DETAILS */
+.details-section {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.discount {
+  color: #d60000;
+  font-weight: 600;
+}
+
+.rating {
+  margin: 5px 0 15px;
+}
+
+.description {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* COLORS */
+.color-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.color-dot.active {
+  border: 3px solid black;
+}
+
+/* SIZES */
+.size-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.size-btn {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.size-btn.active {
+  border-color: black;
+  font-weight: 600;
+}
+
+/* ADD TO CART */
+.add-cart-btn {
+  width: 100%;
+  padding: 14px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* EXTRA INFO */
+.extra-info {
+  font-size: 14px;
+  color: #444;
+}
+
+.extra-info p {
+  margin: 4px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    width: 65px;
+    height: 80px;
+  }
+}

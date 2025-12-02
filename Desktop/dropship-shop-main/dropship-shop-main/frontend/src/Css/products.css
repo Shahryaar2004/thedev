@@ -1,0 +1,334 @@
+/* ===========================
+   GLOBAL
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   NAVBAR DESKTOP
+=========================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  flex: 1;
+}
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nav-center {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-btn {
+  padding: 6px 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: #ffce00;
+  color: #fff;
+  border-color: #ffce00;
+}
+
+/* ===========================
+   TOTAL PRODUCTS
+=========================== */
+.total-products {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ffce00;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #e6b800;
+  color: #fff;
+}
+
+/* ===========================
+   FLOATING CART ICON
+=========================== */
+.floating-cart-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #ffce00;
+  color: #111;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cart-count {
+  background-color: #111;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* ===========================
+   CART DRAWER
+=========================== */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+  transform: translateX(100%);
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+.cart-drawer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffce00;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.cart-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkout-btn,
+.clear-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkout-btn {
+  background-color: #ffce00;
+  color: #111;
+}
+
+.clear-btn {
+  background-color: #eee;
+  color: #111;
+}
+
+.checkout-btn:hover {
+  background-color: #e6b800;
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background-color: #ddd;
+}
+
+/* ===========================
+   MOBILE NAVBAR
+=========================== */
+.mobile-navbar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10001;
+}
+
+.mobile-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hamburger-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===========================
+   HAMBURGER DRAWER
+=========================== */
+.hamburger-drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.hamburger-drawer.open {
+  left: 0;
+}
+
+.hamburger-drawer h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffce00;
+  padding-bottom: 10px;
+}
+
+.hamburger-drawer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hamburger-drawer li {
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.hamburger-drawer li.active-cat {
+  font-weight: 600;
+  color: #ffce00;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+      .navbar {
+    display: none !important;
+  }
+  .nav-center {
+    display: none;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .mobile-navbar {
+    display: flex;
+  }
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 0 10px;
+  }
+}

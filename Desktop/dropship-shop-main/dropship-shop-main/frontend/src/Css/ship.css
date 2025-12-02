@@ -1,0 +1,129 @@
+.ship-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+/* SECTION HEADERS */
+.section-block {
+  margin-bottom: 35px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.section-number {
+  background: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edit-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #0077cc;
+  cursor: pointer;
+}
+
+/* INPUTS */
+.input-field {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9d9d9;
+  margin-top: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* TWO COLUMNS */
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* PHONE FIELD */
+.phone-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.phone-flag-box {
+  padding: 14px 16px;
+  background: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px 0 0 6px;
+  font-size: 15px;
+}
+
+.phone-number-field {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #d9d9d9;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+}
+
+/* CHECKBOX */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.3px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* PROCEED BUTTON */
+.proceed-btn {
+  background: black;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .ship-container {
+    padding: 10px;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-btn {
+    font-size: 12px;
+  }
+}
